@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta CEP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <style>
+        .table {
+            margin-top: 10px;
+        }
+        
+        .result {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .footer {
+            width: 100%;
+            color: #FFF;
+            position: fixed;
+            bottom: 0;
+            background-color: rgb(27, 20, 53);
+            height: 60px;
+            text-align: center;
+        }
+        
+        #navbarSupportedContent {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Consulta CEP</a>
+        <div class="navbar-collapse" id="navbarSupportedContent">
+            <input class="form-control mr-sm-2" type="search" id="cep" placeholder="XXXXX-XXX" maxlength="9" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="consultaCEP()">Buscar</button>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="row result">
+                    <h2>CEP: </h2>
+                    <h2 id="CEP"> </h2>
+                </div>
+                <div class="progress" style="height: 20px;">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                </div>
+                <div class="alert alert-danger" role="alert">
+                </div>
+                <table class="table">
+
+                    <tbody>
+                        <tr>
+                            <td>Logradouro</td>
+                            <td id="logradouro"></td>
+                        </tr>
+                        <tr>
+                            <td>Bairro</td>
+                            <td id="bairro"></td>
+                        </tr>
+                        <tr>
+                            <td>Cidade</td>
+                            <td id="cidade"></td>
+                        </tr>
+                        <tr>
+                            <td>UF</td>
+                            <td id="UF"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row footer">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h4>By Coder: Vinícius Soares</h4>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>
